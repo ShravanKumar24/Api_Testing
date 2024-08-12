@@ -1,0 +1,273 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($locationName:String!,$type:String!,$dimension:String!){\n  \n  createLocation(location:{name:$locationName,type:$type,dimension:$dimension}){\n    id\n  }\n}",
+    "variables": {
+        "locationName": "india",
+        "type": "South-asia",
+        "dimension": "143"
+    }
+}
+HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2023 13:46:37 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 39
+ETag: W/"27-jdR7wJFtBIJ2MQoHXXOHN440r0U"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "createLocation": {
+            "id": 3108
+        }
+    }
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($characterName:String!,$type:String!,$status:String!,$species:String!,$gender:String!,,$image:String!,$originId:Int!,$locationId:Int!){\n  \n  createCharacter(character:{name:$characterName,type:$type,status:$status,species:$species,gender:$gender,image:$image,originId:$originId,locationId:$locationId}){\n    \n    id\n  }\n}",
+    "variables": {
+        "characterName": "Venkatesh ",
+        "type": "Royal",
+        "status": "Alive",
+        "species": "Human",
+        "gender": "Male",
+        "image": "png",
+        "originId": 3108,
+        "locationId": 3108
+    }
+}
+HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2023 13:46:37 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 40
+ETag: W/"28-X26oPUY2NUeyAtEiL9rxARSM4v0"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "createCharacter": {
+            "id": 2761
+        }
+    }
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation ($episodeName: String!, $air_date: String!, $episode: String!) {\n  createEpisode(episode: {name: $episodeName, air_date: $air_date, episode:  $episode}) {\n    id\n  }\n}\n",
+    "variables": {
+        "episodeName": "Rana Naidu",
+        "air_date": "Mar-10-2023",
+        "episode": "1"
+    }
+}
+HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2023 13:46:38 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 38
+ETag: W/"26-aWOM7YVmQ8dSfECM4VT63Fiw59c"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "createEpisode": {
+            "id": 2260
+        }
+    }
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "query ($characterId: Int!, $locationId: Int!, $episodeId: Int!) {\n  character(characterId: $characterId) {\n    name\n    type\n    id\n    status\n    gender\n  }\n  location(locationId: $locationId) {\n    id\n    name\n    type\n    dimension\n    created\n  }\n  episode(episodeId: $episodeId) {\n    name\n    id\n    air_date\n    episode\n  }\n}",
+    "variables": {
+        "characterId": 2761,
+        "locationId": 3108,
+        "episodeId": 2260
+    }
+}
+HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2023 13:46:38 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 297
+ETag: W/"129-yb2Ci5u901Txst6b+IwJ53kjiIU"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "character": {
+            "name": "Venkatesh ",
+            "type": "Royal",
+            "id": 2761,
+            "status": "Alive",
+            "gender": "Male"
+        },
+        "location": {
+            "id": 3108,
+            "name": "india",
+            "type": "South-asia",
+            "dimension": "143",
+            "created": "2023-11-08T13:46:37.769Z"
+        },
+        "episode": {
+            "name": "Rana Naidu",
+            "id": 2260,
+            "air_date": "Mar-10-2023",
+            "episode": "1"
+        }
+    }
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($characterIds:[Int!],$locationIds:[Int!],$episodeIds:[Int!]){\n  \n  deleteLocations(locationIds:$locationIds){\n    locationsDeleted\n  }\n  deleteCharacters(characterIds:$characterIds){\n    charactersDeleted\n  }\n  deleteEpisodes(episodeIds:$episodeIds){\n    episodesDeleted\n  }\n}\n",
+    "variables": {
+        "characterIds": 3108,
+        "locationIds": 2761,
+        "episodeIds": 2260
+    }
+}
+HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2023 13:46:38 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 133
+ETag: W/"85-rJnlyYjgX4Ut9ENjX3mNWfQUeNw"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "deleteLocations": {
+            "locationsDeleted": 1
+        },
+        "deleteCharacters": {
+            "charactersDeleted": 0
+        },
+        "deleteEpisodes": {
+            "episodesDeleted": 1
+        }
+    }
+}

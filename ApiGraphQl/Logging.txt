@@ -1,0 +1,504 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($characterName:String!,$episodeName:String!){\n  \n\n  \n  createCharacter(character:{name:$characterName,type:\"Royal\",status:\"Alive\",species:\"Human\",gender:\"Male\",image:\"jpeg\",originId:1715,locationId:1715}){\n    id\n  }\n  createEpisode(episode:{name:$episodeName,air_date:\"2014_Dec\",episode:\"No:2\"}){\n    id\n  }\n  \n  \n}",
+    "variables": {
+        "characterName": "Clay",
+        "episodeName": "13 Reasons why"
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 01 Sep 2023 08:14:13 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 68
+ETag: W/"44-oMuSnmql0+Q3iVrvuAzNs/cwxkI"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "createCharacter": {
+            "id": 1406
+        },
+        "createEpisode": {
+            "id": 1406
+        }
+    }
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "query ($characterId: Int!, $locationId: Int!, $episodeId: Int!) {\n  character(characterId: $characterId) {\n    name\n    type\n    id\n    status\n    gender\n  }\n  location(locationId: $locationId) {\n    id\n    name\n    type\n    dimension\n    created\n  }\n  episode(episodeId: $episodeId) {\n    name\n    id\n    air_date\n    episode\n  }\n}",
+    "variables": {
+        "characterId": 1406,
+        "locationId": 1715,
+        "episodeId": 1406
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 01 Sep 2023 08:14:14 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 298
+ETag: W/"12a-GT2/oCtNlFIY1Q/p1LL3ex8iyoc"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "character": {
+            "name": "Clay",
+            "type": "Royal",
+            "id": 1406,
+            "status": "Alive",
+            "gender": "Male"
+        },
+        "location": {
+            "id": 1715,
+            "name": "singapore",
+            "type": "South-Zone",
+            "dimension": "256",
+            "created": "2023-08-29T14:56:06.329Z"
+        },
+        "episode": {
+            "name": "13 Reasons why",
+            "id": 1406,
+            "air_date": "2014_Dec",
+            "episode": "No:2"
+        }
+    }
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($characterIds:[Int!],$episodeIds:[Int!]){\n  \n \n  deleteCharacters(characterIds:$characterIds){\n    charactersDeleted\n  }\n  deleteEpisodes(episodeIds:$episodeIds){\n    episodesDeleted\n  }\n}",
+    "variables": {
+        "characterIds": 1406,
+        "episodeIds": 1406
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 01 Sep 2023 08:14:14 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 92
+ETag: W/"5c-ecmd2/WJAfu9SAvaH+JaLNgzHkY"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "deleteCharacters": {
+            "charactersDeleted": 1
+        },
+        "deleteEpisodes": {
+            "episodesDeleted": 1
+        }
+    }
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($characterName:String!,$episodeName:String!){\n  \n\n  \n  createCharacter(character:{name:$characterName,type:\"Royal\",status:\"Alive\",species:\"Human\",gender:\"Male\",image:\"jpeg\",originId:1715,locationId:1715}){\n    id\n  }\n  createEpisode(episode:{name:$episodeName,air_date:\"2014_Dec\",episode:\"No:2\"}){\n    id\n  }\n  \n  \n}",
+    "variables": {
+        "characterName": "Munna",
+        "episodeName": "Mirzapur"
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 01 Sep 2023 08:14:14 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 68
+ETag: W/"44-H++E/6KFlzpMoikLiKUsc3OK6Ss"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "createCharacter": {
+            "id": 1407
+        },
+        "createEpisode": {
+            "id": 1407
+        }
+    }
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "query ($characterId: Int!, $locationId: Int!, $episodeId: Int!) {\n  character(characterId: $characterId) {\n    name\n    type\n    id\n    status\n    gender\n  }\n  location(locationId: $locationId) {\n    id\n    name\n    type\n    dimension\n    created\n  }\n  episode(episodeId: $episodeId) {\n    name\n    id\n    air_date\n    episode\n  }\n}",
+    "variables": {
+        "characterId": 1407,
+        "locationId": 1715,
+        "episodeId": 1407
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 01 Sep 2023 08:14:15 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 293
+ETag: W/"125-lMqAiSnMPJQy4f3fS+gK1Wia/2Q"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "character": {
+            "name": "Munna",
+            "type": "Royal",
+            "id": 1407,
+            "status": "Alive",
+            "gender": "Male"
+        },
+        "location": {
+            "id": 1715,
+            "name": "singapore",
+            "type": "South-Zone",
+            "dimension": "256",
+            "created": "2023-08-29T14:56:06.329Z"
+        },
+        "episode": {
+            "name": "Mirzapur",
+            "id": 1407,
+            "air_date": "2014_Dec",
+            "episode": "No:2"
+        }
+    }
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($characterIds:[Int!],$episodeIds:[Int!]){\n  \n \n  deleteCharacters(characterIds:$characterIds){\n    charactersDeleted\n  }\n  deleteEpisodes(episodeIds:$episodeIds){\n    episodesDeleted\n  }\n}",
+    "variables": {
+        "characterIds": 1407,
+        "episodeIds": 1407
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 01 Sep 2023 08:14:15 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 92
+ETag: W/"5c-ecmd2/WJAfu9SAvaH+JaLNgzHkY"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "deleteCharacters": {
+            "charactersDeleted": 1
+        },
+        "deleteEpisodes": {
+            "episodesDeleted": 1
+        }
+    }
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($characterName:String!,$episodeName:String!){\n  \n\n  \n  createCharacter(character:{name:$characterName,type:\"Royal\",status:\"Alive\",species:\"Human\",gender:\"Male\",image:\"jpeg\",originId:1715,locationId:1715}){\n    id\n  }\n  createEpisode(episode:{name:$episodeName,air_date:\"2014_Dec\",episode:\"No:2\"}){\n    id\n  }\n  \n  \n}",
+    "variables": {
+        "characterName": "Sherlock",
+        "episodeName": "Sherlock Homes"
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 01 Sep 2023 08:14:15 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 68
+ETag: W/"44-/AJZ3hggDxpjXLruaPKKu/huZD4"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "createCharacter": {
+            "id": 1408
+        },
+        "createEpisode": {
+            "id": 1408
+        }
+    }
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "query ($characterId: Int!, $locationId: Int!, $episodeId: Int!) {\n  character(characterId: $characterId) {\n    name\n    type\n    id\n    status\n    gender\n  }\n  location(locationId: $locationId) {\n    id\n    name\n    type\n    dimension\n    created\n  }\n  episode(episodeId: $episodeId) {\n    name\n    id\n    air_date\n    episode\n  }\n}",
+    "variables": {
+        "characterId": 1408,
+        "locationId": 1715,
+        "episodeId": 1408
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 01 Sep 2023 08:14:15 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 302
+ETag: W/"12e-9nMCeuPCnc2GRN7IXxqW8rcvYLM"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "character": {
+            "name": "Sherlock",
+            "type": "Royal",
+            "id": 1408,
+            "status": "Alive",
+            "gender": "Male"
+        },
+        "location": {
+            "id": 1715,
+            "name": "singapore",
+            "type": "South-Zone",
+            "dimension": "256",
+            "created": "2023-08-29T14:56:06.329Z"
+        },
+        "episode": {
+            "name": "Sherlock Homes",
+            "id": 1408,
+            "air_date": "2014_Dec",
+            "episode": "No:2"
+        }
+    }
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($characterIds:[Int!],$episodeIds:[Int!]){\n  \n \n  deleteCharacters(characterIds:$characterIds){\n    charactersDeleted\n  }\n  deleteEpisodes(episodeIds:$episodeIds){\n    episodesDeleted\n  }\n}",
+    "variables": {
+        "characterIds": 1408,
+        "episodeIds": 1408
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 01 Sep 2023 08:14:15 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 92
+ETag: W/"5c-ecmd2/WJAfu9SAvaH+JaLNgzHkY"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "deleteCharacters": {
+            "charactersDeleted": 1
+        },
+        "deleteEpisodes": {
+            "episodesDeleted": 1
+        }
+    }
+}
